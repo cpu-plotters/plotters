@@ -37,13 +37,20 @@ button:focus {
 }
 
 .wrapper {
+  display: flex;
+  flex-direction: column;
   width: 95vw;
+  min-height: 101vh;
   margin: 0 auto;
-  padding: 20px 5vw;
+  padding: 20px 5vw 0;
 
   background-color: #d4cac5;
 
   @media screen and (min-width: 48em) {
     width: 75vw;
   }
+}
+
+.content {
+  margin-top: 20px;
 }

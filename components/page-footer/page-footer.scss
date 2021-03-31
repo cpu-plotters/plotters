@@ -1,3 +1,43 @@
 .page-footer {
-  
+  padding: 20px 5vw;
+  margin-right: -5vw;
+  margin-left: -5vw;
+  margin-top: auto;
+
+  background-color: #b7b7b7;
+
+  .main-menu {
+    margin-bottom: 15px;
+    
+    @media screen and (min-width: $breakpoint-medium) {
+      display: none;
+    }
+  }
+
+  &__additional-info {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    justify-items: end;
+    gap: 10px;
+
+    @media screen and (min-width: $breakpoint-medium) {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+  }
+
+  &__years {
+    @media screen and (min-width: $breakpoint-medium) {
+      margin-left: auto;
+    }
+  }
+
+  &__homepage-link {
+    grid-column: span 2;
+
+    @media screen and (min-width: $breakpoint-medium) {
+      margin-left: 15px;
+    }
+  }
 }

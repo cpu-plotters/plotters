@@ -1,0 +1,6 @@
+mixin goods-list(list)
+  each item in list
+    li
+      a.goods-list__item(href=item.link)
+        img.goods-list__item-img(src=item.img width=180 height=165 alt=item.name)
+        h2.goods-list__item-title= item.name

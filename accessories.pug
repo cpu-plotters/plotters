@@ -1,0 +1,47 @@
+include build/project.pug
+
+-
+  const IMG_PATH = "img/accessories/";
+  let accessories = [
+    {
+      name: "Для режущих плоттеров Rabbit N",
+      img: IMG_PATH + "rabbit_n.jpg",
+      link: "#"
+    },
+    {
+      name: "Для режущих плоттеров с контурной резкой Rabbit K",
+      img: IMG_PATH + "rabbit_k.jpg",
+      link: "#"
+    },
+    {
+      name: "Для планшетных плоттеров HC",
+      img: IMG_PATH + "hc.jpg",
+      link: "#"
+    },
+    {
+      name: "Для фрезерных станков",
+      img: IMG_PATH + "frayser.jpeg",
+      link: "#"
+    },
+    {
+      name: "Для лазерно-гравировальных станков",
+      img: IMG_PATH + "laser.jpg",
+      link: "#"
+    },
+    {
+      name: "Материнская плата для режущего плоттера G-серии",
+      img: IMG_PATH + "motherboard.jpg",
+      link: "#"
+    },
+  ];
+
+  let classNames = {
+    item: "accessories__item",
+    img: "accessories__img",
+    h2: "accessories__item-title"
+  };
+
++page("Комплектующие для плоттеров")
+  ul.goods-list.accessories
+    +goods-list(accessories)
+  
