@@ -6,37 +6,27 @@ include build/project.pug
     {
       name: "Режущие плоттеры Jinka",
       img: IMG_PATH + "jinka.jpg",
-      link: "#"
-    },
-    {
-      name: "Режущие плоттеры Jinka с контурной резкой (программа ArtCut)",
-      img: IMG_PATH + "jinka_artcut.jpg",
-      link: "#"
+      link: "jinka.html"
     },
     {
       name: "Режущие плоттеры Rabbit N",
       img: IMG_PATH + "rabbit_n.jpg",
-      link: "#"
+      link: "rabbit_n.html"
     },
     {
       name: "Режущие плоттеры с контурной резкой Rabbit K",
       img: IMG_PATH + "rabbit_k.jpg",
-      link: "#"
-    },
-    {
-      name: "Режущие плоттеры с контурной резкой K3",
-      img: IMG_PATH + "k3.jpg",
-      link: "#"
+      link: "rabbit_k.html"
     },
     {
       name: "Фрезерные станки",
       img: IMG_PATH + "frayser.jpg",
-      link: "#"
+      link: "frayser.html"
     },
     {
       name: "Комплектующие и оборудование",
       img: IMG_PATH + "accessories.jpg",
-      link: "#",
+      link: "accessories.html",
     },
   ];
 
@@ -46,6 +36,6 @@ include build/project.pug
     h2: "plotters__item-title"
   };
 
-+page("Плоттеры, станки, комплектующие в России")
-  ul.goods-list.plotters
-    +goods-list(plotters)
++page("Плоттеры, станки, комплектующие в России", 0)
+  ul.goods-categories
+    +goods-categories(plotters)

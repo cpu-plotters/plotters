@@ -1,9 +1,23 @@
 include build/project.pug
 
-+page("Контакты")
-  h1= "Контакты"
-  p
-    | Менеджер по продажам:
-    | 8-915-993-69-10 Виталий
-    | Skype: vital8876.martynov
-    | email: vg593005@yandex.ru
+-
+  let person = {
+    title: "По всем вопросам:",
+    phone: "8 (962) 202-10-66",
+    name: "Виталий",
+    skype: "vital8876.martynov",
+    email: "vg593005@yandex.ru"
+  };
+
+  let companies = [
+    "ПЭК",
+    "Байкал Сервис",
+    "Автотрейдинг",
+    "Жэлдорэкспедиция",
+    "Деловые линии",
+    "Энергия",
+    "КИТ",
+  ];
+
++page("Контакты", 5)
+  +contacts(person, companies)

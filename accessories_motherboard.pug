@@ -1,0 +1,16 @@
+include build/project.pug
+
+-
+  const IMG_PATH = "img/accessories/motherboard_g/";
+  let goods = [
+    {
+      name: "Материнская плата<br>для плоттера G-серии",
+      price: "6500 р.",
+      img: IMG_PATH + "motherboard.webp",
+      status: "в наличии"
+    },
+  ];
+
++page("Материнская плата для плоттера G-серии", 1)
+  ul.goods-list
+    +goods-list(goods)

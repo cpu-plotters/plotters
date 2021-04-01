@@ -1,0 +1,46 @@
+include build/project.pug
+
+-
+  const IMG_PATH = "img/accessories/rabbit_k/";
+  let goods = [
+    {
+      name: "Ножи для Rabbit<br>K-серии 45 градусов",
+      price: "300 р.",
+      img: IMG_PATH + "rabbit_k_knife_45.webp",
+      status: "в наличии"
+    },
+    {
+      name: "Ножи для Rabbit<br>K-серии 30 градусов",
+      price: "300 р.",
+      img: IMG_PATH + "rabbit_k_knife_30.webp",
+      status: "в наличии"
+    },
+    {
+      name: "Материнская плата для управления плоттером",
+      price: "6000 р.",
+      img: IMG_PATH + "motherboard_plotter.webp",
+      status: "в наличии"
+    },
+    {
+      name: "Держатель для ножа",
+      price: "700 р.",
+      img: IMG_PATH + "knife_holder.webp",
+      status: "в наличии"
+    },
+    {
+      name: "Блок питания для режущего плоттера",
+      price: "4100 р.",
+      img: IMG_PATH + "power_supply.webp",
+      status: "в пути"
+    },
+    {
+      name: "Электромагнит для режущего плоттера",
+      price: "3300 р.",
+      img: IMG_PATH + "elecrtomagnet.webp",
+      status: "в пути"
+    },
+  ];
+
++page("Комплектующие для Rabbit K", 1)
+  ul.goods-list
+    +goods-list(goods)

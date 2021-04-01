@@ -1,0 +1,82 @@
+include build/project.pug
+
+-
+  const IMG_PATH = "img/accessories/rabbit_n/";
+  let goods = [
+    {
+      name: "Ножи для Rabbit<br>N-серии 45 градусов",
+      price: "300 р.",
+      img: IMG_PATH + "rabbit_n_knife_45.webp",
+      status: "в наличии"
+    },
+    {
+      name: "Ножи для Rabbit<br>N-серии 30 градусов",
+      price: "300 р.",
+      img: IMG_PATH + "rabbit_n_knife_30.webp",
+      status: "в наличии"
+    },
+    {
+      name: "Ножи для Rabbit<br>N-серии 60 градусов",
+      price: "300 р.",
+      img: IMG_PATH + "rabbit_n_knife_60.webp",
+      status: "в наличии"
+    },
+    {
+      name: "МАРЗАН",
+      price: "700 р.",
+      img: IMG_PATH + "marzan.webp",
+      status: "в наличии"
+    },
+    {
+      name: "Ремень",
+      price: "1600-1800 р.",
+      img: IMG_PATH + "belt.webp",
+      status: "в наличии"
+    },
+    {
+      name: "Материнская плата для управления давлением",
+      price: "2500 р.",
+      img: IMG_PATH + "motherboard_pressure.webp",
+      status: "в наличии"
+    },
+    {
+      name: "Материнская плата для управления плоттером",
+      price: "6000 р.",
+      img: IMG_PATH + "motherboard_plotter.webp",
+      status: "в наличии"
+    },
+    {
+      name: "Прижимные упоры для режущего плоттера",
+      price: "900 р.",
+      img: IMG_PATH + "pressure_stops.webp",
+      status: "в наличии"
+    },
+    {
+      name: "Шаговый двигатель для режущего плоттера",
+      price: "2500 р.",
+      img: IMG_PATH + "stepper_motor.webp",
+      status: "в наличии"
+    },
+    {
+      name: "Электромагнит для режущего плоттера",
+      price: "3300 р.",
+      img: IMG_PATH + "electromagnet.webp",
+      status: "в пути"
+    },
+    {
+      name: "Блок питания для режущего плоттера",
+      price: "4100 р.",
+      img: IMG_PATH + "power_supply.webp",
+      status: "в пути"
+    },
+    {
+      name: "Драйвер для Corel Draw",
+      price: "",
+      img: IMG_PATH + "corel_draw_driver.webp",
+      status: ""
+    },
+  ];
+
++page("Комплектующие для Rabbit N", 1)
+  ul.goods-list
+    +goods-list(goods)

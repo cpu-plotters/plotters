@@ -1,0 +1,78 @@
+.contacts {
+
+  @media screen and (min-width: $breakpoint-large) {
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    column-gap: 5vw;
+    align-items: start;
+  }
+  
+  &__person-info {
+    padding: 15px;
+
+    border: 1px solid rgba(128, 106, 106, 0.35);
+  }
+
+  font-size: 1.6rem;
+  color: #544943;
+
+  &__person-title {
+    margin-bottom: 20px;
+
+    font-size: 2rem;
+    font-weight: bold;
+    color: #222222;
+  }
+
+  &__person-phone {
+    margin-bottom: 8px;
+  }
+
+  &__person-phone-number {
+    color: #222222;
+  }
+
+  &__person-skype {
+    margin-bottom: 8px;
+  }
+
+  &__person-skype-login {
+    color: #222222;
+  }
+
+  &__person-email-login {
+    color: #222222;
+  }
+}
+
+.shipping-companies {
+  flex-basis: 2;
+  padding: 15px;
+
+  border: 1px solid rgba(128, 106, 106, 0.35);
+
+  &__text {
+    margin-bottom: 20px;
+
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+
+  &__list {
+    // margin-left: 7vw;
+    padding-left: 10vw;
+
+    @media screen and (min-width: $breakpoint-medium) {
+      padding-left: 60px;
+    }
+    
+
+    list-style-type: square;
+    color: #222222;
+  }
+
+  &__item {
+    margin-bottom: 8px;
+    font-size: 1.6rem;
+  }
+}

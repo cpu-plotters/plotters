@@ -48,6 +48,119 @@ button:focus {
 
 .content {
   margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.content-text {
+  position: relative;
+}
+.content-text::before {
+  position: absolute;
+  top: -15px;
+  content: "";
+  width: 100%;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
+  border-top: 1px dashed rgba(0, 0, 0, 0.35);
+}
+.content-text p {
+  text-indent: 1.5em;
+  margin-bottom: 5px;
+}
+.content-text img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: 15px;
+  object-fit: cover;
+}
+.content-text h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.videos-list {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media screen and (min-width: 52em) {
+  .videos-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px 15px;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 52em) {
+  .videos-list {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    column-gap: 20px;
+  }
+}
+@media screen and (min-width: 85.375em) {
+  .videos-list {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    column-gap: 60px;
+  }
+}
+.videos-list__item {
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 52em) {
+  .videos-list__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+}
+.videos-list__item-title {
+  margin-bottom: 8px;
+  font-size: 1.3rem;
+  color: #544943;
+  font-family: "Roboto Slab", serif;
+  text-align: center;
+}
+.videos-list__item-link {
+  max-width: 100%;
+  width: 100%;
+}
+.videos-list__item-link iframe {
+  width: 100%;
+}
+
+.photos {
+  position: relative;
+}
+.photos::before {
+  position: absolute;
+  top: -15px;
+  content: "";
+  width: 100%;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
+  border-top: 1px dashed rgba(0, 0, 0, 0.35);
+}
+.photos__title {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
+  color: #544943;
+  text-align: center;
+}
+
+.photos-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px 20px;
+}
+.photos-list__item-pic {
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
 }
 
 .page-header {
@@ -106,8 +219,9 @@ button:focus {
   border-right: 17px solid transparent;
 }
 .page-header__title {
-  color: #555346;
-  font-size: 2rem;
+  font-family: "Roboto Slab", serif;
+  color: #413f35;
+  font-size: 1.8rem;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -136,17 +250,23 @@ button:focus {
 }
 .main-menu__item {
   flex-grow: 1;
-  padding: 5px 5px;
-  background-color: #b5aaa4;
-  border: 1px solid black;
-  text-align: center;
-  background-image: linear-gradient(#b5aaa4, #ccbfb9, #b5aaa4);
 }
 .main-menu__item a {
+  display: block;
+  width: 100%;
+  padding: 5px 5px;
   color: #555346;
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
+  background-color: #b5aaa4;
+  background-image: linear-gradient(#b5aaa4, #ccbfb9, #b5aaa4);
+  border: 1px solid black;
+}
+.main-menu__item_active a {
+  color: #25241e;
+  background-image: linear-gradient(#7b6f68, #ccbfb9, #7b6f68);
 }
 
 .page-footer {
@@ -190,7 +310,7 @@ button:focus {
   }
 }
 
-.goods-list__item {
+.goods-categories__item {
   position: relative;
   display: block;
   align-items: center;
@@ -205,14 +325,14 @@ button:focus {
   border: 1px solid rgba(128, 106, 106, 0.35);
 }
 @media screen and (min-width: 52em) {
-  .goods-list__item {
+  .goods-categories__item {
     display: flex;
     margin-bottom: 6px;
     border: none;
   }
 }
 @media screen and (min-width: 52em) {
-  .goods-list__item::after {
+  .goods-categories__item::after {
     position: absolute;
     content: "";
     width: 100%;
@@ -221,7 +341,7 @@ button:focus {
     border-top: 1px dashed rgba(0, 0, 0, 0.35);
   }
 }
-.goods-list__item-img {
+.goods-categories__item-img {
   width: 100%;
   margin-right: 20px;
   object-fit: cover;
@@ -229,23 +349,199 @@ button:focus {
   border-bottom: 1px solid rgba(128, 106, 106, 0.35);
 }
 @media screen and (min-width: 52em) {
-  .goods-list__item-img {
+  .goods-categories__item-img {
     min-width: 180px;
     width: 180px;
   }
 }
-.goods-list__item-title {
+.goods-categories__item-title {
   padding: 10px;
   text-align: center;
 }
 @media screen and (min-width: 52em) {
-  .goods-list__item-title {
+  .goods-categories__item-title {
     text-align: left;
     font-size: 1.5rem;
   }
 }
 @media screen and (min-width: 85.375em) {
-  .goods-list__item-title {
+  .goods-categories__item-title {
     font-size: 2rem;
   }
+}
+
+.goods-list {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px 5px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 52em) {
+  .goods-list {
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 50px 100px;
+  }
+}
+.goods-list__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.goods-list__item-img {
+  min-width: 200px;
+  width: 200px;
+  margin-bottom: 7px;
+  object-fit: cover;
+  object-position: center;
+}
+@media screen and (min-width: 52em) {
+  .goods-list__item-img {
+    min-width: 210px;
+    width: 210px;
+  }
+}
+.goods-list__item-title {
+  margin-bottom: 3px;
+  color: #544943;
+  font-size: 1.6rem;
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
+  text-align: center;
+}
+.goods-list__item-price {
+  color: black;
+  font-size: 1.3rem;
+  line-height: 1.1;
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
+  text-align: center;
+}
+.goods-list__item-status {
+  margin-left: -5px;
+  color: #544943;
+}
+
+.files-list__item {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  margin-bottom: 25px;
+  border: 1px solid rgba(128, 106, 106, 0.35);
+}
+@media screen and (min-width: 52em) {
+  .files-list__item {
+    display: flex;
+    flex-direction: row;
+    border: none;
+  }
+}
+.files-list__item-img {
+  grid-column: 1;
+  justify-self: start;
+}
+@media screen and (min-width: 52em) {
+  .files-list__item-img {
+    margin-right: 10px;
+  }
+}
+.files-list__item-name {
+  grid-column: 2;
+  align-self: center;
+  font-size: 1.1rem;
+  text-align: center;
+  color: #544943;
+}
+@media screen and (min-width: 52em) {
+  .files-list__item-name {
+    margin-right: 30px;
+    font-size: 1.5rem;
+    text-align: left;
+  }
+}
+.files-list__item-file {
+  grid-column: span 2;
+  padding: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #d4cac5;
+  background-image: linear-gradient(to bottom, #c8c0bc, #7f6e64 50%);
+  border-top: 1px solid #b3aaa6;
+}
+.files-list__item-file:hover {
+  background-image: linear-gradient(to bottom, #c8c0bc, #928379 50%);
+}
+@media screen and (min-width: 52em) {
+  .files-list__item-file {
+    align-self: center;
+    margin-right: 2vw;
+    margin-left: auto;
+    padding: 40px 3vw;
+    border-radius: 5px;
+    box-shadow: 0 0 5px -1px black;
+  }
+}
+
+.contacts {
+  font-size: 1.6rem;
+  color: #544943;
+}
+@media screen and (min-width: 85.375em) {
+  .contacts {
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    column-gap: 5vw;
+    align-items: start;
+  }
+}
+.contacts__person-info {
+  padding: 15px;
+  border: 1px solid rgba(128, 106, 106, 0.35);
+}
+.contacts__person-title {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #222222;
+}
+.contacts__person-phone {
+  margin-bottom: 8px;
+}
+.contacts__person-phone-number {
+  color: #222222;
+}
+.contacts__person-skype {
+  margin-bottom: 8px;
+}
+.contacts__person-skype-login {
+  color: #222222;
+}
+.contacts__person-email-login {
+  color: #222222;
+}
+
+.shipping-companies {
+  flex-basis: 2;
+  padding: 15px;
+  border: 1px solid rgba(128, 106, 106, 0.35);
+}
+.shipping-companies__text {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  line-height: 1.1;
+}
+.shipping-companies__list {
+  padding-left: 10vw;
+  list-style-type: square;
+  color: #222222;
+}
+@media screen and (min-width: 52em) {
+  .shipping-companies__list {
+    padding-left: 60px;
+  }
+}
+.shipping-companies__item {
+  margin-bottom: 8px;
+  font-size: 1.6rem;
 }

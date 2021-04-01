@@ -1,0 +1,58 @@
+include build/project.pug
+
+-
+  const IMG_PATH = "img/plotters/frayser/";
+  let goods = [
+    {
+      name: "Фрезерный станок с ЧПУ 3030 (300x300&nbsp;мм)",
+      price: "под заказ",
+      img: IMG_PATH + "frayser_cpu_3030.webp",
+      status: ""
+    },
+    {
+      name: "Фрезерный станок с ЧПУ 0609 (600x900&nbsp;мм)",
+      price: "220 000 р.",
+      img: IMG_PATH + "frayser_cpu_0609.webp",
+      status: ""
+    },
+    {
+      name: "Фрезерный станок с ЧПУ 6090 (600х900&nbsp;мм)",
+      price: "под заказ",
+      img: IMG_PATH + "frayser_cpu_6090.webp",
+      status: ""
+    },
+    {
+      name: "Фрезерный станок с ЧПУ 1212 (1200х1200&nbsp;мм)",
+      price: "под заказ",
+      img: IMG_PATH + "frayser_cpu_1212.webp",
+      status: ""
+    },
+    {
+      name: "Фрезерный станок с ЧПУ 1224 (1200х2400&nbsp;мм)",
+      price: "под заказ",
+      img: IMG_PATH + "frayser_cpu_1224.webp",
+      status: ""
+    },
+    {
+      name: "Фрезерный станок с ЧПУ 1325 (1300х2500&nbsp;мм)",
+      price: "под заказ",
+      img: IMG_PATH + "frayser_cpu_1325.webp",
+      status: ""
+    },
+    {
+      name: "Фрезерный станок с ЧПУ 2030 (2000х3000&nbsp;мм)",
+      price: "под заказ",
+      img: IMG_PATH + "frayser_cpu_2030.webp",
+      status: ""
+    },
+    {
+      name: "Фрезерный станок с ЧПУ 2040 (2000х4000&nbsp;мм)",
+      price: "под заказ",
+      img: IMG_PATH + "frayser_cpu_2040.webp",
+      status: ""
+    },
+  ];
+
++page("Фрезерные станки", 0)
+  ul.goods-list
+    +goods-list(goods)

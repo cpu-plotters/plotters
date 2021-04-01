@@ -1,4 +1,4 @@
-mixin page(title, content)
+mixin page(title, activeTab)
   doctype html
   html(lang="ru")
     head
@@ -14,7 +14,7 @@ mixin page(title, content)
     body
       .wrapper
         +page-header()
-        +main-menu()
+        +main-menu(activeTab)
         section.content 
           block
-        +page-footer()
+        +page-footer(activeTab)

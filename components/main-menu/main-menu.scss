@@ -4,24 +4,32 @@
     display: flex;
     flex-wrap: wrap;
     flex-basis: max-content;
-    // grid-template-columns: 1fr 1fr;
   }
 
   &__item {
-    // place-self: stretch;
     flex-grow: 1;
-    padding: 5px 5px;
-
-    background-color: #b5aaa4;
-    border: 1px solid black;
-    text-align: center;
-    background-image: linear-gradient(#b5aaa4, #ccbfb9, #b5aaa4);
 
     a {
+      display: block;
+      width: 100%;
+      padding: 5px 5px;
+
       color: #555346;
       font-weight: bold;
       text-transform: uppercase;
       text-decoration: none;
+      text-align: center;
+  
+      background-color: #b5aaa4;
+      background-image: linear-gradient(#b5aaa4, #ccbfb9, #b5aaa4);
+      border: 1px solid black;
+    }
+
+    &_active {
+      a {
+        color: #25241e; 
+        background-image: linear-gradient(#7b6f68, #ccbfb9, #7b6f68);
+      }
     }
   }
 }

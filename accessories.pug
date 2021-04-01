@@ -6,32 +6,32 @@ include build/project.pug
     {
       name: "Для режущих плоттеров Rabbit N",
       img: IMG_PATH + "rabbit_n.jpg",
-      link: "#"
+      link: "accessories_rabbit_n.html"
     },
     {
       name: "Для режущих плоттеров с контурной резкой Rabbit K",
       img: IMG_PATH + "rabbit_k.jpg",
-      link: "#"
+      link: "accessories_rabbit_k.html"
     },
     {
       name: "Для планшетных плоттеров HC",
       img: IMG_PATH + "hc.jpg",
-      link: "#"
+      link: "accessories_hc.html"
     },
-    {
-      name: "Для фрезерных станков",
-      img: IMG_PATH + "frayser.jpeg",
-      link: "#"
-    },
-    {
-      name: "Для лазерно-гравировальных станков",
-      img: IMG_PATH + "laser.jpg",
-      link: "#"
-    },
+    //- {
+    //-   name: "Для фрезерных станков",
+    //-   img: IMG_PATH + "frayser.jpeg",
+    //-   link: "#"
+    //- },
+    //- {
+    //-   name: "Для лазерно-гравировальных станков",
+    //-   img: IMG_PATH + "laser.jpg",
+    //-   link: "#"
+    //- },
     {
       name: "Материнская плата для режущего плоттера G-серии",
       img: IMG_PATH + "motherboard.jpg",
-      link: "#"
+      link: "accessories_motherboard.html"
     },
   ];
 
@@ -41,7 +41,7 @@ include build/project.pug
     h2: "accessories__item-title"
   };
 
-+page("Комплектующие для плоттеров")
-  ul.goods-list.accessories
-    +goods-list(accessories)
++page("Комплектующие для плоттеров", 1)
+  ul.goods-categories
+    +goods-categories(accessories)
   

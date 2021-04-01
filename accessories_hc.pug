@@ -1,0 +1,22 @@
+include build/project.pug
+
+-
+  const IMG_PATH = "img/accessories/hc/";
+  let goods = [
+    {
+      name: "Держатель для ножа",
+      price: "650 р.",
+      img: IMG_PATH + "knifeholder.webp",
+      status: "в наличии"
+    },
+    {
+      name: "Нож для плоттера",
+      price: "350 р.",
+      img: IMG_PATH + "knife.webp",
+      status: "в наличии"
+    },
+  ];
+
++page("Комплектующие для HC", 1)
+  ul.goods-list
+    +goods-list(goods)

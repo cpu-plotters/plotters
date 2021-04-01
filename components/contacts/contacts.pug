@@ -1,0 +1,16 @@
+mixin contacts(person, companies)
+  section.contacts
+    .contacts__person-info
+      p.contacts__person-title= person.title
+      p.contacts__person-phone
+        span.contacts__person-phone-number= person.phone 
+        span.contacts__person-phone-name= " - " + person.name 
+      p.contacts__person-skype= "skype: "
+        span.contacts__person-skype-login= person.skype
+      p.contacts__person-email= "email: "
+        span.contacts__person-email-login= person.email
+    section.shipping-companies
+      p.shipping-companies__text= "Доставка осуществляется через транспортные компании:"
+      ul.shipping-companies__list
+        each company in companies 
+          li.shipping-companies__item= company          

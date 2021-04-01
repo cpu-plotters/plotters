@@ -53,4 +53,135 @@ button:focus {
 
 .content {
   margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.content-text {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: -15px;
+    content: "";
+    width: 100%;
+
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
+    border-top: 1px dashed rgba(0, 0, 0, 0.35);
+  }
+
+  p {
+    text-indent: 1.5em;
+    margin-bottom: 5px;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 15px;
+
+    object-fit: cover;
+  }
+
+  h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+.videos-list {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media screen and (min-width: $breakpoint-medium) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px 15px;
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: $breakpoint-medium) {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    column-gap: 20px;
+  }
+
+  @media screen and (min-width: $breakpoint-large) {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    column-gap: 60px;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+
+    @media screen and (min-width: $breakpoint-medium) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 8px;
+
+    font-size: 1.3rem;
+    color: #544943;
+    font-family: "Roboto Slab", serif;
+    text-align: center;
+  }
+
+  &__item-link {
+    max-width: 100%;
+    width: 100%;
+    
+    @media screen and (min-width: $breakpoint-medium) {
+      // width: auto;
+    }
+
+    iframe {
+      width: 100%;
+    }
+  }
+}
+
+.photos {
+  position: relative;
+  
+
+  &::before {
+    position: absolute;
+    top: -15px;
+    content: "";
+    width: 100%;
+
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
+    border-top: 1px dashed rgba(0, 0, 0, 0.35);
+  }
+
+  &__title {
+    margin-bottom: 20px;
+
+    font-size: 2rem;
+    font-family: "Roboto Slab", serif;
+    font-weight: bold;
+    color: #544943;
+    text-align: center;
+  }
+}
+
+.photos-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px 20px;
+
+  &__item-pic {
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+  }
 }

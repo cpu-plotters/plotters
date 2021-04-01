@@ -1,0 +1,31 @@
+include build/project.pug
+
+-
+  const IMG_PATH = "img/drivers/";
+  const FILE_PATH = "files/drivers/";
+
+  let drivers = [
+    {
+      img: IMG_PATH + "driver_icon.png",
+      name: "Драйвера для Windows XP (32 и 64-битная система) для Rabbit N серии",
+      file_path: FILE_PATH + "xp_usb_n.rar"
+    },
+    {
+      img: IMG_PATH + "driver_icon.png",
+      name: "Драйвера для Windows 7 (32 и 64-битная система) для Rabbit K серии",
+      file_path: FILE_PATH + "win7_usb.rar"
+    },
+    {
+      img: IMG_PATH + "driver_icon.png",
+      name: "Драйвера для Windows XP (32 и 64-битная система) для Rabbit K серии",
+      file_path: FILE_PATH + "xp_usb.rar"
+    },
+    {
+      img: IMG_PATH + "driver_icon.png",
+      name: "Драйвера для Windows 7 (32-битная система) для Rabbit N серии",
+      file_path: FILE_PATH + "driver_for_n_g_winxp_win7_32.zip"
+    },
+  ];
+
++page("Драйвера для плоттеров", 2)
+  +files-list(drivers)

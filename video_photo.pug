@@ -1,0 +1,96 @@
+include build/project.pug
+
+- 
+  const IMG_PATH = "files/photos/";
+  let videos = [
+    {
+      name: "Режущий плоттер Rabbit серии N",
+      link: '<iframe width="411" height="276" src="https://www.youtube.com/embed/TvzR0Cm2zVY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    },
+    {
+      name: "Режущий плоттер JINKA с программой<br>Flexi Starter с контурной резкой",
+      link: '<iframe width="411" height="276" src="https://www.youtube.com/embed/_hibx6JvHt8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    },
+    {
+      name: "Режущий плоттер Jinka 721<br>с резкой по контуру",
+      link: '<iframe width="411" height="276" src="https://www.youtube.com/embed/VFK88uNB3ck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    },
+    {
+      name: "Режущий плоттер Jinka 721.<br>Изготовление сувенирной коробки",
+      link: '<iframe width="411" height="276" src="https://www.youtube.com/embed/QRXbra2Y-ds" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    },
+    {
+      name: "Работа в программе Corel Draw",
+      link: '<iframe width="411" height="261" src="https://www.youtube.com/embed/6cDfwjn7_7M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    },
+    {
+      name: "Режущий плоттер Jinka 721 с<br>резкой по контуру с пленкой 135гр",
+      link: '<iframe width="411" height="261" src="https://www.youtube.com/embed/joH7I7RjMiI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    },
+    {
+      name: "Сборка режущего плоттера Jinka JK721",
+      link: '<iframe width="411" height="261" src="https://www.youtube.com/embed/vJdI45rtaFk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    },
+    {
+      name: "Режущий плоттер Rabbit 1360N ",
+      link: '<iframe width="411" height="261" src="https://www.youtube.com/embed/sQndm-KO_WA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    },
+    {
+      name: "Режущий плоттер Jinka 721 с программой Art Cut",
+      link: '<iframe width="411" height="261" src="https://www.youtube.com/embed/W4bHpXJ_l_M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    },
+    {
+      name: "Установка программы Art Cut",
+      link: '<iframe width="411" height="261" src="https://www.youtube.com/embed/6eQ2d4AhjdQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    },
+    {
+      name: "Режущий плоттер с контурной резкой К3",
+      link: '<iframe width="411" height="261" src="https://www.youtube.com/embed/D3n2O6LC6cI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    },
+    {
+      name: "HX-KIII King Rabbit",
+      link: '<iframe width="411" height="261" src="https://www.youtube.com/embed/nkRizDLKLB8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    },
+    {
+      name: "K3 Flexi 12",
+      link: '<iframe width="411" height="261" src="https://www.youtube.com/embed/NicFZrz1zxM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    },
+    {
+      name: "Automatic contour cutting plotter cut figure",
+      link: '<iframe width="411" height="261" src="https://www.youtube.com/embed/lPUGoNIp1wk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    },
+    {
+      name: "Режущий плоттер Jinka JK721,<br>1101 1351 с программой Flexi Starter",
+      link: '<iframe width="411" height="261" src="https://www.youtube.com/embed/AnIs9d02Ofc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    },
+  ];
+
+  let photos = [
+    {
+      src: IMG_PATH + "krasnodar_1.webp",
+      alt: "Гравировка акрила 1"
+    },
+    {
+      src: IMG_PATH + "krasnodar_2.webp",
+      alt: "Гравировка акрила 2"
+    },
+    {
+      src: IMG_PATH + "krasnodar_3.webp",
+      alt: "Гравировка акрила 3"
+    },
+  ];
+
++page("Видео и фотографии", 3)
+  .videos-and-photos
+    section.videos
+      ul.videos-list
+        each video in videos
+          li.videos-list__item
+            p.videos-list__item-title !{video.name}
+            .videos-list__item-link !{video.link}
+    section.photos
+      h2.photos__title= "Гравировка акрила на режущем плоттере 1360N для заливки в г.Краснодаре"
+      ul.photos-list
+        each photo in photos
+          li.photos-list__item
+            img.photos-list__item-pic(src=photo.src width="285" height="210" alt=photo.alt)
