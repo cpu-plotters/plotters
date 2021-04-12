@@ -1,0 +1,35 @@
+include build/project.pug
+
+-
+  const IMG_PATH = "img/plotters/jinka_xl/";
+  let goods = [
+    {
+      name: "Jinka XL-365",
+      price: "под заказ",
+      img: IMG_PATH + "jinka_xl-365.jpg",
+    }, 
+    {
+      name: "Jinka XL-721",
+      price: "под заказ",
+      img: IMG_PATH + "jinka_xl-721.jpg",
+    }, 
+    {
+      name: "Jinka XL-1101",
+      price: "под заказ",
+      img: IMG_PATH + "jinka_xl-1101.jpg",
+    }, 
+    {
+      name: "Jinka XL-1351",
+      price: "под заказ",
+      img: IMG_PATH + "jinka_xl-1351.jpg",
+    }, 
+    {
+      name: "Jinka XL-1661",
+      price: "под заказ",
+      img: IMG_PATH + "jinka_xl-1661.jpg",
+    }, 
+  ];
+
++page("Режущие плоттеры Jinka XL", 0)
+  ul.goods-list
+    +goods-list(goods)
