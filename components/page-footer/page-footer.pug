@@ -1,6 +1,6 @@
-mixin page-footer(activeTab)
+mixin page-footer(activeTab, relativePath = "")
   footer.page-footer
-    +main-menu(activeTab)
+    +main-menu(activeTab, relativePath)
     .page-footer__additional-info
       span.page-footer__author= "Виталий М."
       span.page-footer__years ⚓ 2014-2021 

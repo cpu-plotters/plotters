@@ -1,7 +1,7 @@
-include build/project.pug
+include ../build/project.pug
 
 -
-  const IMG_PATH = "img/accessories/motherboard_g/";
+  const IMG_PATH = "img/motherboard_g/";
   let goods = [
     {
       name: "Материнская плата<br>для плоттера G-серии",
@@ -11,6 +11,6 @@ include build/project.pug
     },
   ];
 
-+page("Материнская плата для плоттера G-серии", 1)
++page("Материнская плата для плоттера G-серии", 1, "../")
   ul.goods-list
     +goods-list(goods)

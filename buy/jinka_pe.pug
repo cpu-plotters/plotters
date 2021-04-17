@@ -1,7 +1,7 @@
-include build/project.pug
+include ../build/project.pug
 
 -
-  const IMG_PATH = "img/plotters/jinka_pe/";
+  const IMG_PATH = "img/jinka_pe/";
   let goods = [
     {
       name: "Jinka JK365",
@@ -35,7 +35,7 @@ include build/project.pug
     },
   ];
 
-+page("Режущие плоттеры Jinka PE", 0)
++page("Режущие плоттеры Jinka PE", 0, "../")
   ul.goods-list
     +goods-list(goods)
   .content-text

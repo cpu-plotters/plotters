@@ -1,7 +1,7 @@
-include build/project.pug
+include ../build/project.pug
 
 -
-  const IMG_PATH = "img/plotters/rabbit_k3/";
+  const IMG_PATH = "img/rabbit_k3/";
   let goods = [
     {
       name: "Rabbit HX 800K3",
@@ -29,7 +29,7 @@ include build/project.pug
     },
   ];
 
-+page("Режущие плоттеры с автоматической Rabbit K3", 0)
++page("Режущие плоттеры с автоматической Rabbit K3", 0, "../")
   ul.goods-list
     +goods-list(goods)
   .content-text

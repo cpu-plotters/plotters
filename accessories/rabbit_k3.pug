@@ -1,7 +1,7 @@
-include build/project.pug
+include ../build/project.pug
 
 -
-  const IMG_PATH = "img/accessories/rabbit_k3/";
+  const IMG_PATH = "img/rabbit_k3/";
   let goods = [
     {
       name: "Ножи для Rabbit<br>K-серии 45 градусов",
@@ -41,6 +41,6 @@ include build/project.pug
     },
   ];
 
-+page("Комплектующие для Rabbit K", 1)
++page("Комплектующие для Rabbit K", 1, "../")
   ul.goods-list
     +goods-list(goods)

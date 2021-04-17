@@ -27,7 +27,7 @@
   ];
 
 
-mixin main-menu(activeTab)
+mixin main-menu(activeTab, relativePath = "")
   nav.main-menu
     ul.main-menu__list
       each item, index in menuItems
@@ -37,4 +37,4 @@ mixin main-menu(activeTab)
             className += " main-menu__item_active";
           }
         li(class= className)
-          a(href=item.link)= item.text
+          a(href= relativePath + item.link)= item.text

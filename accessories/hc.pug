@@ -1,7 +1,7 @@
-include build/project.pug
+include ../build/project.pug
 
 -
-  const IMG_PATH = "img/accessories/hc/";
+  const IMG_PATH = "img/hc/";
   let goods = [
     {
       name: "Держатель для ножа",
@@ -17,6 +17,6 @@ include build/project.pug
     },
   ];
 
-+page("Комплектующие для HC", 1)
++page("Комплектующие для HC", 1, "../")
   ul.goods-list
     +goods-list(goods)
