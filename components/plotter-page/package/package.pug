@@ -1,2 +1,4 @@
-mixin package()
-        
+mixin package(package)
+  ul.package
+    each item in package
+      li.package-item= item

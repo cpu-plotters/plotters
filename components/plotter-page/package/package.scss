@@ -1,3 +1,14 @@
 .package {
-  
+  margin-left: 20px;
+  list-style-type: square;
+
+  font-size: 16px;
+
+  @media screen and (min-width: $breakpoint-medium) {
+    font-size: 20px;
+  }
+
+  &-item:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
 }

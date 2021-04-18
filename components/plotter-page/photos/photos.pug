@@ -1,2 +1,5 @@
-mixin photos()
-  
+mixin photos(photos)
+  ul.photos
+    each photo in photos 
+      li.photos-item 
+        img(src=photo.src width=photo.width height=photo.height alt=photo.alt)

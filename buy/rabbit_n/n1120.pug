@@ -18,5 +18,54 @@ include ../../build/project.pug
     ["Гарантия", "1 год"],
   ];
 
+  const package = [
+    "режущий плоттер",
+    "2 интерфейсных кабеля",
+    "сетевой кабель",
+    "инструкция по установке на русском языке",
+    "программное обеспечение для установки режущего плоттера",
+    "держатель для ножа",
+    "держатель для стержня",
+    "стержень шариковый",
+    "напольный мобильный стенд с держателем рулона",
+    "чехол",
+  ];
+
+  const description = "В комплектацию у режущего плоттера входит специализированное программное обеспечение ArtCut Software. Программное обеспечение специально создано для режущих плоттеров данной серии. Режущий плоттер может устанавливаться как принтер, что позволяет ему работать напрямую из Corel Draw, Auto Cad и других векторных программ. Но в этом случае отсутствует точка офсета, поэтому возможно недорезание углов соприкосновения, в этом случае советуем создавать файл в Corel Draw, а дальше импортировать в программное обеспечение идущее в комплекте с режущим плоттером.";
+
+  const IMG_PATH = "../img/rabbit_n/hx_n1120/";
+  const photos = [
+    {
+      src: IMG_PATH + "outside_view.jpg",
+      width: "350",
+      height: "248",
+      alt: "Outside view"
+    },
+    {
+      src: IMG_PATH + "software.jpg",
+      width: "350",
+      height: "279",
+      alt: "Software"
+    },
+    {
+      src: IMG_PATH + "inside_the_box.jpg",
+      width: "332",
+      height: "326",
+      alt: "Inside the box"
+    },
+    {
+      src: IMG_PATH + "king_rabbit_disc.jpg",
+      width: "332",
+      height: "196",
+      alt: "King Rabbit disc"
+    },
+  ];
+
 +page("Rabbit HX N1120", 0, "../../")
+  +photos(photos)
+  .delimiter
   +specs(specs)
+  .delimiter
+  +package(package)
+  .delimiter
+  +description(description)

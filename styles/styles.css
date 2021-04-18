@@ -2,6 +2,7 @@ html {
   font-size: 16px;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  text-align: justify;
 }
 
 *,
@@ -161,6 +162,13 @@ button:focus {
   width: 100%;
   max-width: 100%;
   object-fit: cover;
+}
+
+.delimiter {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
+  border-top: 1px dashed rgba(0, 0, 0, 0.35);
 }
 
 .page-header {
@@ -545,4 +553,65 @@ button:focus {
 .shipping-companies__item {
   margin-bottom: 8px;
   font-size: 1.6rem;
+}
+
+.description {
+  font-size: 15px;
+  line-height: 1.2;
+  text-indent: 1.5em;
+}
+@media screen and (min-width: 52em) {
+  .description {
+    font-size: 20px;
+  }
+}
+
+.package {
+  margin-left: 20px;
+  list-style-type: square;
+  font-size: 16px;
+}
+@media screen and (min-width: 52em) {
+  .package {
+    font-size: 20px;
+  }
+}
+.package-item:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+.photos {
+  margin-bottom: -20px;
+}
+@media screen and (min-width: 52em) {
+  .photos {
+    columns: 2;
+  }
+}
+.photos-item img {
+  max-width: 100%;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+@media screen and (min-width: 52em) {
+  .photos-item img {
+    height: auto;
+  }
+}
+
+.specs {
+  font-size: 16px;
+}
+@media screen and (min-width: 52em) {
+  .specs {
+    font-size: 22px;
+  }
+}
+.specs td {
+  padding: 5px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
