@@ -383,10 +383,11 @@ button:focus {
     gap: 50px 100px;
   }
 }
-.goods-list__item {
+.goods-list__item a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-decoration: none;
 }
 .goods-list__item-img {
   min-width: 200px;

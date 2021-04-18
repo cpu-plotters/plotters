@@ -1,9 +1,10 @@
 mixin goods-list(list)
   each item in list
     li.goods-list__item
-      img.goods-list__item-img(src=item.img width="210" height="160" alt=item.name)
-      h3.goods-list__item-title !{item.name}
-      if item.price
-        span.goods-list__item-price !{item.price}
-      if item.status
-        span.goods-list__item-status= item.status
+      a(href=item.link)
+        img.goods-list__item-img(src=item.img width="210" height="160" alt=item.name)
+        h3.goods-list__item-title !{item.name}
+        if item.price
+          span.goods-list__item-price !{item.price}
+        if item.status
+          span.goods-list__item-status= item.status
