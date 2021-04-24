@@ -4,4 +4,4 @@ mixin files-list(files)
       li.files-list__item 
         img.files-list__item-img(src=file.img width="128" height="128" alt="Иконка драйвера")
         span.files-list__item-name= file.name
-        a.files-list__item-file(href=file.file_path download)= "Скачать"
+        a.files-list__item-file(href=file.file_path target=file.new_window ? "_blank" : "_self" download)= "Скачать"
