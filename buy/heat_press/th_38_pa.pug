@@ -1,0 +1,86 @@
+include ../../build/project.pug
+
+-
+  const specs = [
+    ["Рабочее поле", "38 x 38"],
+    ["Напряжение", "110V/220 В, +- 10%"],
+    ["Температура", "0/300°C"],
+    ["Рекомендуемая макс. температура", "250°С"],
+    ["Таймер", "Автоматический цифровой со звуковым сигналом"],
+    ["Время таймера", "0-999 сек"],
+    ["Цифровой дисплей", "Да"],
+    ["Защита ", "С помощью предохранителя"],
+  ];
+
+  const description = "Термопресс предназначается для переноса на различные изображения: текстиль, керамика, картон, кожа и т.д.";
+
+  const IMG_PATH = "../img/heat_press/th_38_pa/";
+  const photos = [
+    {
+      src: IMG_PATH + "back_panel.jpg",
+      width: "2312",
+      height: "1300",
+      alt: "Back panel"
+    },
+    {
+      src: IMG_PATH + "display.jpg",
+      width: "2312",
+      height: "1300",
+      alt: "Display"
+    },
+    {
+      src: IMG_PATH + "instructions.jpg",
+      width: "2312",
+      height: "1300",
+      alt: "Instructions"
+    },
+    {
+      src: IMG_PATH + "poster.jpg",
+      width: "2312",
+      height: "1300",
+      alt: "Poster"
+    },
+    {
+      src: IMG_PATH + "serial_number.jpg",
+      width: "2312",
+      height: "1300",
+      alt: "Serial number"
+    },
+    {
+      src: IMG_PATH + "specs.jpg",
+      width: "2312",
+      height: "1300",
+      alt: "Specs"
+    },
+    {
+      src: IMG_PATH + "temperature_conversion.jpg",
+      width: "2312",
+      height: "1300",
+      alt: "Temperature conversion"
+    },
+    {
+      src: IMG_PATH + "view_above.jpg",
+      width: "2312",
+      height: "1300",
+      alt: "View from the above"
+    },
+    {
+      src: IMG_PATH + "view_front.jpg",
+      width: "1300",
+      height: "2312",
+      alt: "View from the front"
+    },
+    {
+      src: IMG_PATH + "view_left_side.jpg",
+      width: "2312",
+      height: "1300",
+      alt: "View from the left side"
+    },
+  ];
+
++page("TH 38 PA", 0, "../../")
+  +specs(specs)
+  .delimiter
+  +description(description)
+  .delimiter
+  +photos(photos)

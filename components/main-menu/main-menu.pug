@@ -1,4 +1,4 @@
-- 
+-
   let menuItems = [
     {
       text: "Товары",
@@ -31,10 +31,5 @@ mixin main-menu(activeTab, relativePath = "")
   nav.main-menu
     ul.main-menu__list
       each item, index in menuItems
-        - 
-          let className = "main-menu__item";
-          if (activeTab == index) {
-            className += " main-menu__item_active";
-          }
-        li(class= className)
+        li(class="main-menu__item" class={'main-menu__item_active': activeTab == index})
           a(href= relativePath + item.link)= item.text

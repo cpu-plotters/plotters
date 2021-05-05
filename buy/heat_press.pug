@@ -1,0 +1,17 @@
+include ../build/project.pug
+
+-
+  const IMG_PATH = "img/heat_press/";
+  let goods = [
+    {
+      name: "TH 38 PA",
+      price: "под заказ",
+      img: IMG_PATH + "th_38_pa.jpg",
+      status: "",
+      link: "heat_press/th_38_pa.html",
+    },
+  ];
+
++page("Термопрессы", 0, "../")
+  ul.goods-list
+    +goods-list(goods)

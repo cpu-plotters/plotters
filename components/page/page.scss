@@ -7,8 +7,8 @@ html {
   text-align: justify;
 }
 
-*, 
-*::before, 
+*,
+*::before,
 *::after {
   box-sizing: inherit;
 }
@@ -18,14 +18,14 @@ body {
   padding: 0;
 
   font-family: 'Exo 2', sans-serif;
-  
+
   background: url("../img/bg-pattern.png") repeat;
 }
 
 button {
     display: inline-block;
     border: none;
-   
+
     text-align: center;
     text-decoration: none;
 
@@ -140,7 +140,7 @@ button:focus {
   &__item-link {
     max-width: 100%;
     width: 100%;
-    
+
     @media screen and (min-width: $breakpoint-medium) {
       // width: auto;
     }
@@ -153,17 +153,6 @@ button:focus {
 
 .photos {
   position: relative;
-  
-
-  &::before {
-    position: absolute;
-    top: -15px;
-    content: "";
-    width: 100%;
-
-    border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
-    border-top: 1px dashed rgba(0, 0, 0, 0.35);
-  }
 
   &__title {
     margin-bottom: 20px;
