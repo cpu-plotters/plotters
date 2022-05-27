@@ -607,3 +607,26 @@ button:focus {
   padding: 5px 10px;
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
+
+.photos {
+  margin-bottom: -20px;
+}
+@media screen and (min-width: 52em) {
+  .photos {
+    columns: 2;
+  }
+}
+.photos-item img {
+  max-width: 100%;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+@media screen and (min-width: 52em) {
+  .photos-item img {
+    height: auto;
+  }
+}

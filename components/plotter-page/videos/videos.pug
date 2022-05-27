@@ -1,0 +1,7 @@
+mixin videos(videos)
+  ul.videos
+    each video in videos
+      li.videos-item
+        li.videos-list__item
+          p.videos-list__item-title !{video.name}
+          .videos-list__item-link !{video.link}

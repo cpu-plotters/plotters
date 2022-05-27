@@ -44,6 +44,16 @@ include ../../build/project.pug
       alt: "Plate"
     },
   ];
+  const videos = [
+    {
+      name: "THJ-45",
+      link: '<iframe width="750" height="413" src="https://www.youtube.com/embed/rYlYKY1KLBk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    },
+    {
+      name: "THJ-45 (2)",
+      link: '<iframe width="750" height="425" src="https://www.youtube.com/embed/UJiZ5-VMeuY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    },
+  ];
 
 +page("THJ-45", 0, "../../")
   +specs(specs)
@@ -51,3 +61,5 @@ include ../../build/project.pug
   +description(description)
   .delimiter
   +photos(photos)
+  .delimiter
+  +videos(videos)
