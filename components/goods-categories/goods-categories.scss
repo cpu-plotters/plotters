@@ -4,7 +4,7 @@
     position: relative;
     display: block;
     // display: flex;
-    
+
     align-items: center;
     margin-bottom: 25px;
 
@@ -22,7 +22,7 @@
     @media screen and (min-width: $breakpoint-medium) {
       display: flex;
       margin-bottom: 6px;
-      
+
       border: none;
     }
 
@@ -53,10 +53,12 @@
     }
   }
 
-  &__item-title {
+  &__info-container {
     padding: 10px;
+  }
+
+  &__item-title {
     text-align: center;
-    // border-right: 1px solid black;
 
     @media screen and (min-width: $breakpoint-medium) {
       text-align: left;
@@ -66,5 +68,11 @@
     @media screen and (min-width: $breakpoint-large) {
       font-size: 2rem;
     }
+  }
+
+  &__item-add-info {
+    color: black;
+
+    text-transform: initial;
   }
 }

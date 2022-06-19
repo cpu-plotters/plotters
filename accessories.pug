@@ -9,6 +9,11 @@ include build/project.pug
       link: "accessories/rabbit_n.html"
     },
     {
+      name: "Для режущих плоттеров Jinka",
+      img: IMG_PATH + "jinka_pe.jpg",
+      link: "accessories/jinka.html"
+    },
+    {
       name: "Для режущих плоттеров с автоматической контурной резкой Rabbit K3",
       img: IMG_PATH + "rabbit_k3.jpg",
       link: "accessories/rabbit_k3.html"
@@ -20,8 +25,13 @@ include build/project.pug
     },
     {
       name: "Материнская плата для режущего плоттера G-серии",
-      img: IMG_PATH + "motherboard.jpg",
-      link: "accessories/motherboard.html"
+      img: IMG_PATH + "motherboard_g.jpg",
+      link: "accessories/motherboard_g.html"
+    },
+    {
+      name: "Материнская плата для плоттера Rabbit K1",
+      img: IMG_PATH + "motherboard_rabbit_k1.jpg",
+      link: "accessories/motherboard_rabbit_k1.html"
     },
   ];
 
@@ -34,4 +44,3 @@ include build/project.pug
 +page("Комплектующие для плоттеров", 1)
   ul.goods-categories
     +goods-categories(accessories)
-  

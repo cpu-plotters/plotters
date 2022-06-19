@@ -1,0 +1,15 @@
+include ../build/project.pug
+
+-
+  const IMG_PATH = "img/motherboard_rabbit_k1/";
+  let goods = [
+    {
+      name: "Материнская плата<br>для плоттера Rabbit K1",
+      img: IMG_PATH + "motherboard_rabbit_k1.jpg",
+      status: "в наличии"
+    },
+  ];
+
++page("Материнская плата для плоттера Rabbit K1", 1, "../")
+  ul.goods-list
+    +goods-list(goods)

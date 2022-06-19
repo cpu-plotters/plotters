@@ -354,8 +354,10 @@ button:focus {
     width: 180px;
   }
 }
-.goods-categories__item-title {
+.goods-categories__info-container {
   padding: 10px;
+}
+.goods-categories__item-title {
   text-align: center;
 }
 @media screen and (min-width: 52em) {
@@ -368,6 +370,10 @@ button:focus {
   .goods-categories__item-title {
     font-size: 2rem;
   }
+}
+.goods-categories__item-add-info {
+  color: black;
+  text-transform: initial;
 }
 
 .goods-list {

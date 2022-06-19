@@ -1,0 +1,40 @@
+include ../build/project.pug
+
+-
+  const IMG_PATH = "img/jinka/";
+  let goods = [
+    {
+      name: "Материнская плата",
+      price: "7000 р.",
+      img: IMG_PATH + "motherboard.jpg",
+      status: "в наличии"
+    },
+    {
+      name: "Магнит",
+      price: "4000 р.",
+      img: IMG_PATH + "magnet.jpg",
+      status: "в наличии"
+    },
+    {
+      name: "USB-плата",
+      price: "2000 р.",
+      img: IMG_PATH + "usb-plate.jpg",
+      status: "в наличии"
+    },
+    {
+      name: "Блок питания",
+      price: "4000 р.",
+      img: IMG_PATH + "power_unit.jpg",
+      status: "в наличии"
+    },
+    {
+      name: "Шлейф управления",
+      price: "2000 р.",
+      img: IMG_PATH + "controller.jpg",
+      status: "в наличии"
+    },
+  ];
+
++page("Комплектующие для Jinka", 1, "../")
+  ul.goods-list
+    +goods-list(goods)
